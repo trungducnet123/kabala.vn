@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lá Số Tử Vi - Nghệ Thuật Hiểu Mình</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(120deg, #fffbe7 0%, #e1fffa 100%);
+      color: #222f3e;
+    }
+    header {
+      background: linear-gradient(90deg, #1fa2ff 0%, #12d8fa 57%, #a6ffcb 100%);
+      color: #fff;
+      padding: 44px 0 22px 0;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(30,144,255,0.10);
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 14px 0 0 0;
+      font-size: 1.13em;
+      font-weight: 500;
+      opacity: 0.94;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto 32px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(30,144,255,0.09);
+      padding: 38px 32px 32px 32px;
+      animation: fadein 1s;
+      position: relative;
+      z-index: 2;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px);}
+      to   { opacity: 1; transform: none;}
+    }
+    h2 {
+      color: #1fa2ff;
+      font-size: 1.4em;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 13px;
+      letter-spacing: 0.5px;
+    }
+    h3 {
+      color: #12d8fa;
+      font-size: 1.13em;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .intro {
+      font-size: 1.15em;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .quote {
+      margin: 32px 0;
+      font-style: italic;
+      font-size: 1.15em;
+      color: #12d8fa;
+      text-align: center;
+      background: #e7faff;
+      padding: 15px 22px;
+      border-radius: 12px;
+      box-shadow: 0 1px 8px rgba(30,144,255,0.05);
+      position: relative;
+    }
+    .quote::before, .quote::after {
+      content: '"';
+      font-size: 1.8em;
+      opacity: 0.24;
+      color: #1fa2ff;
+      vertical-align: top;
+    }
+    .section-content {
+      font-size: 1.07em;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .highlight {
+      background: #fffbe7;
+      padding: 8px 14px;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 8px 0;
+      color: #1fa2ff;
+      font-weight: 600;
+    }
+    .accordion {
+      margin-top: 8px;
+      margin-bottom: 28px;
+    }
+    .accordion-item {
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(30,144,255,0.08);
+      background: #f7faff;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .accordion-header {
+      padding: 16px 20px;
+      cursor: pointer;
+      background: #dbf4ff;
+      font-weight: 600;
+      color: #1fa2ff;
+      display: flex;
+      align-items: center;
+      transition: background 0.18s;
+    }
+    .accordion-header:hover {
+      background: #a6ffcb;
+    }
+    .accordion-header span {
+      margin-right: 12px;
+      font-size: 1.3em;
+      font-weight: bold;
+      transition: transform 0.25s;
+    }
+    .accordion-content {
+      padding: 0 20px 16px 20px;
+      animation: fadein 0.6s;
+      display: none;
+      color: #2d3a4a;
+      background: #fff;
+      font-size: 1em;
+    }
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+    .accordion-item.active .accordion-header span {
+      transform: rotate(90deg);
+    }
+    .resources {
+      margin-top: 38px;
+      text-align: center;
+    }
+    .resources a {
+      display: inline-block;
+      margin-right: 18px;
+      margin-bottom: 12px;
+      color: #12d8fa;
+      text-decoration: none;
+      font-weight: 500;
+      background: #e7faff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .resources a:hover {
+      background: #a6ffcb;
+      color: #1fa2ff;
+    }
+    .create-btn {
+      display: inline-block;
+      background: linear-gradient(90deg,#1fa2ff,#12d8fa,#a6ffcb);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 26px;
+      font-size: 1.08em;
+      cursor: pointer;
+      margin-top: 28px;
+      margin-bottom: 0;
+      box-shadow: 0 2px 8px rgba(30,144,255,0.09);
+      transition: background 0.25s, box-shadow 0.25s;
+    }
+    .create-btn:hover {
+      background: linear-gradient(90deg,#12d8fa,#1fa2ff,#a6ffcb);
+      box-shadow: 0 4px 14px rgba(30,144,255,0.15);
+    }
+    @media (max-width: 600px) {
+      main {padding: 13px 5px;}
+      .resources a {margin-right: 0;}
+      .accordion-header, .accordion-content {padding: 12px 10px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lá Số Tử Vi</h1>
+    <p>Nghệ thuật soi sáng khuynh hướng và tự chủ vận mệnh</p>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Giới thiệu về Lá Số Tử Vi</h2>
+      <p>
+        Lá số Tử Vi là một bản đồ biểu tượng mô tả khí chất, điểm mạnh – điểm yếu, xu hướng cảm xúc và mô thức hành động của mỗi người. Khác với dự báo tương lai, mệnh lý (Tử Vi, Bát Tự, Tứ Trụ, v.v.) không phải bản án đời người, mà là tấm gương giúp ta soi sáng chính mình, điều chỉnh thói quen, đi qua bất định bằng lựa chọn tỉnh táo.
+      </p>
+    </section>
+
+    <div class="quote">
+      Dự báo tương lai dễ mê hoặc, nhưng đời người không phải bản án đã viết sẵn. Mệnh lý chỉ là tấm gương soi khuynh hướng và điểm mù trong ta—để hiểu mình, điều chỉnh thói quen, và đi qua bất định bằng lựa chọn tỉnh táo. 
+    </div>
+
+    <section>
+      <h2>Đặt vấn đề đúng về mệnh lý</h2>
+      <div class="section-content">
+        <span class="highlight">Mệnh lý mạnh ở “tính hướng”, không phải ở “kết cục”.</span>
+        <ul>
+          <li>
+            Các hệ thống như Bát Tự, Tử Vi, Tứ Trụ, Numerology... là các hệ thống biểu tượng để mô tả khuynh hướng con người: khí chất, điểm mạnh – điểm yếu, cách ta xử lý cảm xúc, phong cách ra quyết định, mô thức quan hệ…
+          </li>
+          <li>
+            Kết cục của một đời người là tổ hợp của: <b>bản tính</b> + <b>lựa chọn</b> + <b>hoàn cảnh</b> + <b>tính bất định</b>.
+            <br>
+            Mệnh lý chủ yếu chỉ chạm được vào phần bản tính, đôi khi gợi ý cho lựa chọn; nhưng hoàn cảnh và tính bất định thường nằm ngoài khả năng dự báo của nó.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ứng dụng lá số Tử Vi như nghệ thuật tự chủ</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header"><span>▶</span>Hiểu khuynh hướng cá nhân</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Nhận diện điểm mạnh, điểm yếu, xu hướng xử lý cảm xúc và hành động.</li>
+              <li>Tự soi lại bản thân để điều chỉnh thói quen, chọn lựa phù hợp.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header"><span>▶</span>Giải mã điểm mù và mô thức quan hệ</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Nhận diện các điểm mù, khuynh hướng dễ mắc phải trong các mối quan hệ.</li>
+              <li>Hiểu phong cách ra quyết định và cách mình kết nối với người khác.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header"><span>▶</span>Dùng mệnh lý như tấm gương, không phải chiếc gậy xem bói</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Sử dụng lá số để soi sáng bản thân thay vì phụ thuộc vào các dự báo kết cục.</li>
+              <li>Chủ động chọn lựa, điều chỉnh bản thân để đi qua bất định bằng sự tỉnh táo.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tạo lá số tử vi trực tuyến</h2>
+      <button class="create-btn" onclick="window.open('https://kabala.vn/la-so-tu-vi/', '_blank')">
+        Tạo Lá Số Tử Vi tại Kabala.vn
+      </button>
+    </section>
+
+    <section class="resources">
+      <h2>Tài nguyên hữu ích</h2>
+      <a href="https://kabala.vn/la-so-tu-vi/" target="_blank">Trang tạo lá số Tử Vi</a>
+      <a href="https://kabala.vn/menh-ly-la-gi/" target="_blank">Giải thích về mệnh lý</a>
+      <a href="https://kabala.vn/phat-trien-ban-than/" target="_blank">Phát triển bản thân với mệnh lý</a>
+    </section>
+  </main>
+  <script>
+    // Accordion Effect
+    document.querySelectorAll('.accordion-header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var item = header.parentElement;
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(function(i) { i.classList.remove('active'); });
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
