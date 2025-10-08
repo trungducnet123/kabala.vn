@@ -11,6 +11,5 @@ Cái Tôi: Cái tôi liên quan đến bản ngã, tự trọng, và cách mà c
 
 Trong Đạo An, việc nhận thức và kiểm soát lòng tham và cái tôi được xem là quan trọng để hướng tới một cuộc sống hạnh phúc và ý nghĩa. Bằng cách giảm bớt những ham muốn không cần thiết và sống một cuộc đời khiêm tốn, chúng ta có thể tìm thấy sự bình yên nội tâm và hài hòa trong mối quan hệ với người khác, từ đó dẫn đến hạnh phúc thực sự.
 
----------------------------
-# Trang chủ: https://kabala.vn
+- Trang chủ: https://kabala.vn
 
