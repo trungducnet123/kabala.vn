@@ -1,1 +1,308 @@
-<b>ffdsfsdf</b>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thấu Hiểu Bản Thân - Kabala.vn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(115deg, #f7faff 0%, #dbf4ff 80%);
+      color: #2d3a4a;
+    }
+    header {
+      background: linear-gradient(90deg, #1fa2ff 0%, #12d8fa 51%, #a6ffcb 100%);
+      color: #fff;
+      padding: 44px 0 24px 0;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(30,144,255,0.10);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    header p {
+      margin: 12px 0 0 0;
+      font-size: 1.15em;
+      font-weight: 500;
+      opacity: 0.94;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto 32px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(30,144,255,0.08);
+      padding: 40px 32px 32px 32px;
+      animation: fadein 1s;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px);}
+      to   { opacity: 1; transform: none;}
+    }
+    h2 {
+      color: #1fa2ff;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    h3 {
+      color: #12d8fa;
+      font-size: 1.18em;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .intro {
+      font-size: 1.14em;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    ul, ol {
+      margin-bottom: 24px;
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+    .quote {
+      margin: 32px 0;
+      font-style: italic;
+      font-size: 1.15em;
+      color: #12d8fa;
+      text-align: center;
+      position: relative;
+      background: #e7faff;
+      padding: 17px 24px;
+      border-radius: 12px;
+      box-shadow: 0 1px 8px rgba(30,144,255,0.05);
+    }
+    .quote::before, .quote::after {
+      content: '"';
+      font-size: 1.8em;
+      opacity: 0.25;
+      color: #1fa2ff;
+      vertical-align: top;
+    }
+    .accordion {
+      margin-top: 8px;
+      margin-bottom: 36px;
+    }
+    .accordion-item {
+      border-radius: 12px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(30,144,255,0.08);
+      background: #f7faff;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .accordion-header {
+      padding: 16px 20px;
+      cursor: pointer;
+      background: #dbf4ff;
+      font-weight: 600;
+      color: #1fa2ff;
+      display: flex;
+      align-items: center;
+      transition: background 0.18s;
+    }
+    .accordion-header:hover {
+      background: #a6ffcb;
+    }
+    .accordion-header span {
+      margin-right: 12px;
+      font-size: 1.3em;
+      font-weight: bold;
+      transition: transform 0.25s;
+    }
+    .accordion-content {
+      padding: 0 20px 16px 20px;
+      animation: fadein 0.6s;
+      display: none;
+      color: #2d3a4a;
+      background: #fff;
+    }
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+    .accordion-item.active .accordion-header span {
+      transform: rotate(90deg);
+    }
+    .resources {
+      margin-top: 40px;
+    }
+    .resources a {
+      display: inline-block;
+      margin-right: 18px;
+      margin-bottom: 12px;
+      color: #12d8fa;
+      text-decoration: none;
+      font-weight: 500;
+      background: #e7faff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .resources a:hover {
+      background: #a6ffcb;
+      color: #1fa2ff;
+    }
+    .share-btn {
+      display: inline-block;
+      background: linear-gradient(90deg,#1fa2ff,#12d8fa,#a6ffcb);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 22px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 24px;
+      margin-bottom: 0;
+      box-shadow: 0 2px 7px rgba(30,144,255,0.09);
+      transition: background 0.25s,box-shadow 0.25s;
+    }
+    .share-btn:hover {
+      background: linear-gradient(90deg,#12d8fa,#1fa2ff,#a6ffcb);
+      box-shadow: 0 4px 14px rgba(30,144,255,0.15);
+    }
+    @media (max-width: 600px) {
+      main {padding: 14px 5px;}
+      .resources a {margin-right: 0;}
+      .accordion-header, .accordion-content {padding: 12px 10px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thấu Hiểu Bản Thân</h1>
+    <p>Khám phá, yêu thương và phát triển chính mình cùng Kabala.vn</p>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Giới thiệu</h2>
+      <p>
+        Thấu hiểu bản thân là hành trình nhận diện con người thật sự bên trong bạn, từ điểm mạnh, điểm yếu đến những giá trị cốt lõi, ước mơ và động lực sống. Khi hiểu mình, ta dễ dàng đưa ra quyết định phù hợp, sống ý nghĩa, bình an và hạnh phúc hơn. 
+      </p>
+    </section>
+
+    <section>
+      <h2>Tại sao cần thấu hiểu bản thân?</h2>
+      <ul>
+        <li>Giúp bạn nhận diện rõ điều mình muốn, tránh sống theo kỳ vọng của người khác.</li>
+        <li>Định hướng nghề nghiệp, học tập và xây dựng mối quan hệ phù hợp với bản chất.</li>
+        <li>Giảm căng thẳng, tránh so sánh, tự tin phát triển thế mạnh của bản thân.</li>
+        <li>Tạo nền tảng cho sự trưởng thành, chuyển hóa tâm lý và phát triển trí tuệ cảm xúc.</li>
+      </ul>
+    </section>
+
+    <div class="quote">
+      “Hành trình thấu hiểu bản thân là nền tảng của mọi chuyển hóa và hạnh phúc thực sự.”
+    </div>
+
+    <section>
+      <h2>Dấu hiệu bạn chưa thực sự hiểu chính mình</h2>
+      <ul>
+        <li>Thường xuyên cảm thấy lạc lối, không biết mình thích gì, muốn gì.</li>
+        <li>Dễ bị ảnh hưởng bởi ý kiến, cảm xúc của người khác.</li>
+        <li>Hay so sánh bản thân và cảm thấy tự ti, thiếu tự tin.</li>
+        <li>Sống theo thói quen, khuôn mẫu mà không biết vì sao.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Các bước thấu hiểu bản thân</h2>
+      <ol>
+        <li><b>Tự quan sát</b>: Ghi nhận cảm xúc, phản ứng của mình trong các tình huống hàng ngày.</li>
+        <li><b>Viết nhật ký</b>: Viết về suy nghĩ, cảm xúc, những điều đã học được từ bản thân mỗi ngày.</li>
+        <li><b>Lắng nghe phản hồi</b>: Nhận ý kiến chân thành từ bạn bè, đồng nghiệp để nhìn bản thân khách quan hơn.</li>
+        <li><b>Thử nghiệm mới</b>: Trải nghiệm môi trường, hoạt động và thử thách mới để khám phá tiềm năng và giới hạn.</li>
+        <li><b>Thiền và tĩnh tâm</b>: Dành thời gian lắng đọng, kết nối với nội tâm để hiểu rõ động lực, giá trị sống.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Bài tập thực hành hàng ngày</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header"><span>▶</span>Viết nhật ký cảm xúc</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Cuối ngày, dành 10 phút viết ra 3 cảm xúc nổi bật và nguyên nhân.</li>
+              <li>Ghi chú điều bạn đã làm tốt và điều cần cải thiện.</li>
+              <li>Nhận diện mẫu cảm xúc lặp lại để hiểu sâu hơn về động lực bên trong.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header"><span>▶</span>Thiền quan sát suy nghĩ</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Ngồi tĩnh 5-10 phút mỗi ngày, quan sát suy nghĩ đến và đi mà không đánh giá.</li>
+              <li>Ghi lại suy nghĩ thường xuất hiện nhất, từ đó hiểu “tiếng nói bên trong” của mình.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header"><span>▶</span>Trò chuyện với người bạn thân</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Chia sẻ cảm xúc, tâm sự về những điều khó nói.</li>
+              <li>Xin phản hồi chân thành về điểm mạnh, điểm cần cải thiện.</li>
+              <li>Lắng nghe để hiểu góc nhìn của người khác về mình.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header"><span>▶</span>Thử làm điều chưa từng</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Đăng ký tham gia một hoạt động mới, thử sức ở lĩnh vực chưa từng trải nghiệm.</li>
+              <li>Ghi lại cảm xúc, bài học và khám phá mới về bản thân.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tài nguyên hữu ích</h2>
+      <div class="resources">
+        <a href="https://kabala.vn/thau-hieu-ban-than/" target="_blank">Bài viết gốc Kabala.vn</a>
+        <a href="https://www.ted.com/topics/self" target="_blank">TED Talks về Thấu Hiểu Bản Thân</a>
+        <a href="https://www.goodreads.com/shelf/show/self-discovery" target="_blank">Sách Khám Phá Bản Thân</a>
+        <a href="https://www.verywellmind.com/self-discovery-4157198" target="_blank">Bài viết về Khám Phá Bản Thân</a>
+      </div>
+    </section>
+
+    <button class="share-btn" onclick="sharePage()">Chia sẻ bài viết</button>
+  </main>
+  <script>
+    // Accordion Effect
+    document.querySelectorAll('.accordion-header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var item = header.parentElement;
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(function(i) { i.classList.remove('active'); });
+        if (!isActive) item.classList.add('active');
+      });
+    });
+    // Share Button
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          url: window.location.href,
+          text: 'Khám phá hành trình thấu hiểu bản thân cùng Kabala.vn!'
+        });
+      } else {
+        alert('Bạn có thể copy link sau để chia sẻ:\n' + window.location.href);
+      }
+    }
+  </script>
+</body>
+</html>
